@@ -1,0 +1,67 @@
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/fake.js"></script>
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/focusbar.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+    <style>
+  .google-btn{
+                color: #fff;
+                text-decoration: none;
+                font-size: 50px;
+                padding: 10px;
+                background: #ff5353;
+                position: center;
+            }
+
+  .google-btn:hover, .dropdown:hover .dropbtn {
+          background-color: grey;
+      }
+  </style>  
+</head>
+
+<body>
+		<div id="footer">
+	<div class="container">
+		<div class="jumbotron">
+<ul>
+
+  <li><a2>{{#if user}}{{user.name}}'s {{/if}}Login Page</a2></li>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">More</a>
+    <div class="dropdown-content">
+      <a href="/">My Focus</a>
+      <a href="/friends">Friends</a>
+      <a href="/fake">Login</a>
+    </div>
+  </li>
+</ul>
+
+	</div>
+	<h1>Please Login By:</h1>
+	 <a class="google-btn" href="/auth/google">Google+</a>
+	 <h2>↑↑↑Click↑↑↑</h2>
+
+<!-- <form name="loginEmail" onsubmit="return validateForm();" method="post">
+
+<ul>
+<li>USERNAME: <input class="username" type="text" name="username">
+</li>
+
+<li>PASSWORD: <input class="password" type="text" name="password">
+ </li>
+</ul>
+
+<a href="javascript: history.go(-1)">Login</a>
+
+</form> -->
+</div>
+</div>
+
+</body>
+</html>

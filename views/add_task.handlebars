@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Study Booster</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/js/jquery-1.11.0.js"></script>
+	<script src="/js/hci-friends.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<link href="/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="box">
+		<div id="footer">
+	<div class="container">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div class="jumbotron">
+			<h1>Focus App</h1>
+			<!-- <p>human-computer interaction &middot; social computing &middot; crowdsourcing</p> -->
+
+		<!-- <ol>
+		{{#each projects}}
+			<li><a href="#{{id}}">{{name}}</a></li>
+		{{/each}}
+		</ol> -->
+			<h4>Focus Score: 80</h4>
+
+
+		</div>
+		<div class="task_table">
+			<h3>My Tasks</h3>
+		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+		<!-- {{#each projects}}
+			<div class="project" id="{{id}}">
+				<a href="/project/{{name}}" class="thumbnail">
+					<img src="images/{{image}}" class="img">
+					<p>{{name}}</p>
+				</a>
+			</div>
+		{{/each}} -->
+
+
+	{{#each friends}}
+		<div class="task" id="name" >
+			<a href="/task_page" class="thumbnail">
+				<p>{{name}}</p>
+			</a>
+			<div id="class_assoc">
+				<p>{{description}}</p>
+			</div>
+			<div id="time_spent">
+				<p>{{time}}</p>
+			</div>
+		</div>
+	{{/each}}
+	</div>
+
+		<div id="container">
+			<a href="/add_task">
+			<button type="button home-button" id="button3" >+</button>
+			</a>
+		</div>
+
+	<form id="addFriendForm" role="form" method="get" action="/add">
+		<h3>Add a New Task</h3>
+	    <div class="form-group">
+	      <label for="name">Task Name:</label>
+	      <input type="text" class="form-control" id="name" placeholder="Task Name" name="name">
+	    </div>
+	    <div class="form-group">
+	      <label for="description">Task Description:</label>
+	      <input type="text" class="form-control" id="description" placeholder="Task Description" name="description">
+	    </div>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the new task"></input>
+	</form>
+
+		<div id="container">
+			<a href="/">
+		    <button type="button home-button" id="button1" >My Focus</button>
+			</a>
+			<a href="/friends">
+			<button type="button contact-button" id="button2">Friends</button>
+			</a>
+		</div>
+	</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

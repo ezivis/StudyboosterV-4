@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="/js/stopwatch.js"></script>
+	<link href="/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stopwatch</title>
+
+
+</head>
+<body>
+		<div id="footer">
+	<div class="container">
+		<div class="jumbotron">
+<ul>
+  <li><a2>Add a Task</a2></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">More</a>
+    <div class="dropdown-content">
+      <a href="/">My Focus</a>
+      <a href="/friends">Friends</a>
+      <a href="/fake">Login</a>
+    </div>
+  </li>
+</ul>
+		</div>
+	<div>
+
+	<div class="task_timeadd">
+   		<h3>Focus Time: <span id="time"></span><h3>
+    	<input type="button" value="start" onclick="stopwatch.start();">
+    	<input type="button" value="stop" onclick="stopwatch.stop();">
+    	<input type="button" value="reset" onclick="stopwatch.reset();">
+    <div>
+
+
+
+
+ 	<form id="addFriendForm" role="form" method="get" action="/add">
+	<div class="task_time">
+		<h3>Add a New Task</h3>
+	    <h4><div class="form-group"><h4>
+	      <label for="name">Your Task Name:</label>
+	      <input type="text" class="form-control" id="name" placeholder="Task Name" name="name">
+	    </div>
+	    <h4><div class="form-group"><h4>
+	      <label for="description">Your Class Name:</label>
+	      <input type="text" class="form-control" id="description" placeholder="Class Description" name="description">
+	    </div>
+	    <h4><div class="form-group"><h4>
+	      <label for="name">Enter Your Time:</label>
+	      <input type="number" class="form-control" id="time" placeholder="Minutes" name="time">
+	    </div>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the new task"></input>
+	</form>
+<a class="btn btn-default" href="javascript: history.go(-1)">Back</a>
+</body>
+<script type="text/javascript" src="/js/stopwatch.js" onload = "stopwatch.update();"></script>
+</html>

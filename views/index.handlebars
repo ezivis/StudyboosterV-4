@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Study Booster</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/focusbar.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+
+</head>
+
+<body>
+
+		<div id="footer">
+	<div class="container">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div class="jumbotron">
+<ul>
+
+=======
+  <li><a2>{{#if user}}{{user.name}}'s {{/if}}Focus Home Page</a2></li>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">More</a>
+    <div class="dropdown-content">
+      <a href="/">My Focus</a>
+      <a href="/friends">Friends</a>
+      <a href="/fake">Login</a>
+    </div>
+  </li>
+</ul>
+		<!-- <ol>
+		{{#each projects}}
+			<li><a href="#{{id}}">{{name}}</a></li>
+		{{/each}}
+		</ol> -->
+
+
+
+
+		</div>
+
+<div class="foucsbar">
+  <div class="fbar">
+    <div class="skill">Your Focus Score</div>
+    <div class="bar-outer">
+      <div class="speech-bubble photo">80</div>
+      <div class="bar-inner ph"></div>
+
+</div>	
+
+<div class=taskc><h3>All of Your Tasks</h3></div>
+<div class="taskb"><button class="btn121" id="hide">Hide All Task</button>
+<button class="btn121" id="show">Show All Task</button>
+		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+		<!-- {{#each projects}}
+			<div class="project" id="{{id}}">
+				<a href="/project/{{name}}" class="thumbnail">
+					<img src="images/{{image}}" class="img">
+					<p>{{name}}</p>
+				</a>
+			</div>
+		{{/each}} -->
+	{{#each friends}}
+		<div class="task" id="name" >
+			<a class="thumbnail">
+				<p>{{name}}</p>
+			</a>
+			<div id="class_assoc">
+				<p>{{description}}</p>
+			</div>
+			<div id="time_spent">
+				<p>{{time}}<span> Minutes</span></p>
+			</div>
+		</div>
+	{{/each}}
+	</div></div>
+
+		<div id="container">
+			<a href="/stop_watch" class="thumbnail">
+			<button type="button home-button" id="button3" >+</button>
+			</a>
+		</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/focusbar.js"></script>
+</body>
+</html>

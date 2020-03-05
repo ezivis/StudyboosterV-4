@@ -1,0 +1,3 @@
+{
+	"friends": [{"name": "Read", "description":"COGS 120", "time":"20", "notes": "Need to finish videos, quiz next week"},{"name": "Studied", "description":"CSE 120", "time":"30", "notes": "Need to review chapter 3 before midterm"},{"name": "Homework", "description":"ECON 120A", "time":"30", "notes": "Had trouble understanding Bayes thereom - go to office hours"}]
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>You V.S Mark A.</title>
+
+	<link href="/css/friendcompare.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+	<link href="/css/main.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'COGS 120', 'CSE 120', 'ECON 120A', 'Total'],
+          ['You',  20,      30,         30,             80],
+          ['Mark A.',  30,      40,        30,             100],
+          ['Lastmonth Total',  50,      90,        70,             210],
+        ]);
+
+        var options = {
+          title : 'You and Mark A. Focus this month',
+          vAxis: {title: 'Person'},
+          hAxis: {title: 'Time'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'You','Mark A.'],
+          ['United States', 80, 0],          
+          ['Canada', 0, 100],
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+<body>
+		<div id="footer">
+	<div class="container">
+		<div class="jumbotron">
+<ul>
+  <li><a2>Mark A.</a2></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">More</a>
+    <div class="dropdown-content">
+      <a href="/">My Focus</a>
+      <a href="/friends">Friends</a>
+      <a href="/fake">Login</a>
+    </div>
+  </li>
+</ul>
+
+<div class="container">
+<h4>You V.S Mark A.</h4>
+<div id="myProgress" class="center12">
+  <div id="myBar"></div>
+</div>
+
+<br>
+<div class="center12">
+    <div id="myBar" class="center12" style="height:24px;width:0%">
+  </div>
+
+  <p id="myP">Mark A. has <span id="demo">0</span> focus score more than you</p>
+
+  <button class="btn124" onclick="move();this.disabled='true'">Let's see who is better!</button> 
+</div>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 50);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      document.getElementById("myP").className = "w3-text-green w3-animate-opacity";
+      document.getElementById("myP").innerHTML = "Mark A. Wins! He has 80 focus score more than you";
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      var num = width * 8 / 10;
+      num = num.toFixed(0)
+      document.getElementById("demo").innerHTML = num;
+    }
+  }
+}
+</script>
+
+<div class="center12" id="chart_div" style="width: 300px; height: 200px; "></div>
+<div class="center12" id="regions_div" style="width: 300px; height: 200px;"></div>
+<a class="btn btn-default" href="javascript: history.go(-1)">Back</a>
+</div>
+</body>
+</html>
